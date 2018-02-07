@@ -1,8 +1,12 @@
 import opml
 import feedparser
 import youtube_dl
+import sys
 from glob import glob
 from pprint import pprint
+
+if sys.version_info[0] < 3:
+    raise Exception('Must be using Python 3')
 
 from time import time, mktime, strptime
 from datetime import datetime
