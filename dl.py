@@ -47,7 +47,7 @@ else:
     else:
         print(str(len(videos))+' new videos found')
 
-    ydl_opts = {}
+    ydl_opts = {'ignoreerrors': True}
 
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download(videos)
